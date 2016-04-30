@@ -8,7 +8,6 @@ namespace NumberMethods
 {
     public class IntegerMethods
     {
-       // For when you need a number from the user.  Do note that if it's something as simple as a counter, it'll be just like x++; that's all.
         static int GetIntegerFromUser(string prompt)
         {
             while (true)
@@ -25,6 +24,12 @@ namespace NumberMethods
                     Console.WriteLine("Please enter an integer.");
                 }
             }
+        }
+        // thing I learned today, Counter is already an used word in System.Reflection.
+        static int Counting()
+        {
+            int x = 1;
+            return ++x;
         }
     }
 }
