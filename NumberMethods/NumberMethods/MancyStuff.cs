@@ -19,5 +19,21 @@ namespace NumberMethods
         If it isn't, convert that string back into an array
         and repeat
         */
+
+        public string spell = Console.ReadLine();
+
+        static string SpellArray(string spell)
+        {
+            string[] letters = spell.Split();
+
+            for (int i = 0; i < letters.Length; i++)
+            {
+                string currentLetter = letters[i];
+                for (int j = 0; j < currentLetter.Length; j++)
+                {
+                    if (currentLetter = "a" || "j" || "s")
+                }
+            }
+        }
     }
 }
