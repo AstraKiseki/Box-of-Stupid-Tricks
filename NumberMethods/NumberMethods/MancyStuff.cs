@@ -22,7 +22,7 @@ namespace NumberMethods
 
         public string spell = Console.ReadLine();
 
-        static string SpellArray(string spell)
+        public static string SpellArray(string spell)
         {
             string[] letters = spell.Split();
 
@@ -31,9 +31,27 @@ namespace NumberMethods
                 string currentLetter = letters[i];
                 for (int j = 0; j < currentLetter.Length; j++)
                 {
-                    if (currentLetter = "a" || "j" || "s")
+                    if (currentLetter == "a")
+                    { }
+                    if (currentLetter == "b")
+                    { }
+                    if (currentLetter == "c")
+                    { }
+                    if (currentLetter == "d")
+                    { }
+                    if (currentLetter == "e")
+                    { }
+                    if (currentLetter == "f")
+                    { }
+                    if (currentLetter == "g")
+                    { }
+                    if (currentLetter == "h")
+                    { }
+                    if (currentLetter == "i")
+                    { }
                 }
             }
+            
         }
     }
 }
