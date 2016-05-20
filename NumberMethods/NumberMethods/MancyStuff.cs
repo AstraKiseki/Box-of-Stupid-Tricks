@@ -24,33 +24,59 @@ namespace NumberMethods
 
         public static string SpellArray(string spell)
         {
+            spell = spell.ToLower();
             string[] letters = spell.Split();
-
+            List<int> rootList = new List<int>();
+            int digitalRoot;
             for (int i = 0; i < letters.Length; i++)
             {
                 string currentLetter = letters[i];
                 for (int j = 0; j < currentLetter.Length; j++)
                 {
-                    if (currentLetter == "a")
-                    { }
-                    if (currentLetter == "b")
-                    { }
-                    if (currentLetter == "c")
-                    { }
-                    if (currentLetter == "d")
-                    { }
-                    if (currentLetter == "e")
-                    { }
-                    if (currentLetter == "f")
-                    { }
-                    if (currentLetter == "g")
-                    { }
-                    if (currentLetter == "h")
-                    { }
-                    if (currentLetter == "i")
-                    { }
+                    if (currentLetter == "a" || currentLetter == "s" || currentLetter == "j")
+                    {
+                        rootList.Add(1);
+                    }
+                    if (currentLetter == "b" || currentLetter == "k" || currentLetter == "t")
+                    {
+                        rootList.Add(2);
+                    }
+                    if (currentLetter == "c" || currentLetter == "l" || currentLetter == "u")
+                    {
+                        rootList.Add(3);
+                    }
+                    if (currentLetter == "d" || currentLetter == "m" || currentLetter == "v")
+                    {
+                        rootList.Add(4);
+                    }
+                    if (currentLetter == "e" || currentLetter == "n" || currentLetter == "w")
+                    {
+                        rootList.Add(5);
+                    }
+                    if (currentLetter == "f" || currentLetter == "o" || currentLetter == "x")
+                    {
+                        rootList.Add(6);
+                    }
+                    if (currentLetter == "g" || currentLetter == "p" || currentLetter == "y")
+                    {
+                        rootList.Add(7);
+                    }
+                    if (currentLetter == "h" || currentLetter == "q" || currentLetter == "z")
+                    {
+                        rootList.Add(8);
+                    }
+                    if (currentLetter == "i" || currentLetter == "r")
+                    {
+                        rootList.Add(9);
+                    }
+                    else
+                    {
+                        rootList.Add(0);
+                    }
                 }
             }
+            digitalRoot = rootList.Sum();
+            string rootCheck = digitalRoot.ToString();
             
         }
     }
