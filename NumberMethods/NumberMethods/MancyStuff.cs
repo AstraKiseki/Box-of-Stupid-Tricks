@@ -22,13 +22,18 @@ namespace NumberMethods
 
         public string spell = Console.ReadLine();
 
-        public static string SpellArray(string spell)
+        public static void SpellArray(string spell)
         {
             spell = spell.ToLower();
             string[] letters = spell.Split();
             List<int> rootList = new List<int>();
-            int digitalRoot;
-            for (int i = 0; i < letters.Length; i++)
+            int digitalRoot = 0;
+            digitalRoot = rootList.Sum();
+            string rootCheck = digitalRoot.ToString();
+            string[] rootNumbers = rootCheck.Split();
+
+            if (rootNumbers.Length != 0)
+                for (int i = 0; i < letters.Length; i++)
             {
                 string currentLetter = letters[i];
                 for (int j = 0; j < currentLetter.Length; j++)
@@ -75,9 +80,7 @@ namespace NumberMethods
                     }
                 }
             }
-            digitalRoot = rootList.Sum();
-            string rootCheck = digitalRoot.ToString();
-            
+            Console.WriteLine("So the digital root of the spell" + spell + "is" + digitalRoot + ".");
         }
     }
 }
