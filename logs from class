@@ -1,0 +1,274 @@
+
+astrakiseki [12:32 PM] 
+Organization-wise, should I start with Core or Data?
+
+cameronwilby [12:33 PM] 
+Core, then Data
+
+astrakiseki [12:33 PM] 
+Awesome.  Making Domain, then Models, then Repository, and Infrastructure?
+
+[12:34] 
+(And it'd be an ASP.net web project?)
+
+cameronwilby [12:35 PM] 
+yep
+
+[12:35] 
+actually, the process looks more like this
+
+[12:35] 
+- Core.Domain
+- Data.Infrastructure (So you can build the database using the classes you just added in Core.Domain)
+- Core.Models
+- Core.Repository
+- Data.Repository (edited)
+
+astrakiseki [12:37 PM] 
+And open it as an empty project with stuff for web api?
+
+astrakiseki [12:52 PM] 
+(Is each opened with a new ASP.net web project?)
+
+astrakiseki [12:58 PM] 
+Or is it classes or...?
+
+cameronwilby [12:59 PM] 
+No, core and data are class libraries
+
+[1:00] 
+API is a web API project
+
+astrakiseki [1:01 PM] 
+So the snowflake main would be a web API project, and Core, Data are both class libraries, Web is well, a new web page, and test is...?
+
+cameronwilby [1:02 PM] 
+a unit test project
+
+astrakiseki [1:02 PM] 
+k!
+
+[1:02] 
+Annnnd now I made VS crash and cry.
+
+[1:04] 
+What is the difference between a class library and a class library (package)?
+
+[1:05] 
+Necessary NuGet packages will be...?
+
+[1:09] 
+I assume Cors, ASP.net Identity, AutoMapper, Oauth, um, what else... entity framework...
+
+cameronwilby [1:22 PM] 
+class library package is for making a nuget package
+
+[1:23] 
+class library is for making a class library in a project
+
+[1:23] 
+yeah
+
+astrakiseki [1:28 PM] 
+That's all of them at the moment?
+
+astrakiseki [1:44 PM] 
+Which ASP.net packages do I grab?
+
+astrakiseki [2:18 PM] 
+added a Plain Text snippet 
+Fluff log from another thing last night with friends:
+// Arguments: // callback - (Function) The aforementioned callback function. The first // argument is the Swallow  If true, log to console
+astra.kiseki - Yesterday at 8:08 PM
+... I actually somewhat get that, I think.
+Add Comment Click to expand inline 12 lines
+astrakiseki [2:32 PM] 
+How do you set the length of a string?  Or will I have to do varchar and then a second string?
+
+astrakiseki [2:50 PM] 
+Hm, and an array of userIds would be phrased as?
+
+astrakiseki [3:05 PM] 
+Which ones need a virtual collection?
+
+astrakiseki [3:56 PM] 
+... the ones that have many.
+
+cameronwilby [4:43 PM] 
+that would be something you limit on the frontend
+
+astrakiseki [4:44 PM] 
+And how would I approach the 'these people have chosen this thought'?
+
+cameronwilby [4:52 PM] 
+sorry, I was answering "How do you set the length of a string?"
+
+astrakiseki [4:52 PM] 
+That's what I thought.
+
+cameronwilby [4:52 PM] 
+How you would approach "these people have chosen this thought" is the one i'm thinking about now
+
+astrakiseki [4:52 PM] 
+Okay dokie.
+
+[4:53] 
+I was thinking an array with a .Where
+
+[4:53] 
+But that might end up too big in time?
+
+
+----- March 10th -----
+astrakiseki [9:51 AM] 
+P.S. Mine's simple, it's just trying to fully understand how to map the model builder.
+
+astrakiseki [12:50 PM] 
+Should I just go get lunch now?
+
+cameronwilby [12:59 PM] 
+everybody has gone to lunch
+
+[12:59] 
+so you’re next in line
+
+[12:59] 
+wanna jump in the office?
+
+astrakiseki [12:59 PM] 
+Okay dokie, be right there.
+
+astrakiseki [2:29 PM] 
+Which video is the one involving the unit of work stuff?
+
+cameronwilby [2:56 PM] 
+hmm, not sure - what do you need to know about it? (it’s a fairly simple class after all)
+
+astrakiseki [2:56 PM] 
+Curiosity due to me noticing it in Wingman while opening up controllers.
+
+astrakiseki [3:59 PM] 
+Current Issue: How to configure the ParticipationsController when it has a composite key and it wants to know where its ID is?
+
+
+----- March 11th -----
+astrakiseki [12:37 PM] 
+Which Owin do I grab?
+
+astrakiseki [12:45 PM] 
+And I think the trouble right now is an 'ordinary' anxiety flare.  No causes or anything, it's just an obnoxious wave of nervousness that I have to wait out.
+
+
+----- March 14th -----
+astrakiseki [10:25 AM] 
+I uh, think I deleted something I shouldn't have again.
+
+cameronwilby [10:27 AM] 
+Lol what did you delete?
+
+astrakiseki [10:28 AM] 
+Nevermind, I fixed it.  I had deleted my migrations but couldn't build to fix.
+
+[10:28] 
+So I went into my recycling bin and hit restore.
+
+[10:28] 
+(Well, restore the ONE THING I had deleted.)
+
+astrakiseki [10:33 AM] 
+Shaved down a bunch of my errors but there's three I'm still poking at.
+
+[10:36] 
+but brb bathroom
+
+astrakiseki [11:02 AM] 
+"Define the key for this EntityType."  For UserRole.
+
+[11:02] 
+So I guess I just use Key?
+
+astrakiseki [11:10 AM] 
+THIS IS GETTING SILLY.  New problem now, involves Data apparently not existing?
+
+astrakiseki [11:46 AM] 
+Got it fixed!
+
+astrakiseki [7:18 PM] 
+So how to arrange the meetings?
+
+
+----- March 15th -----
+astrakiseki [9:18 AM] 
+How do you want to arrange the Wednesday meeting?
+
+astrakiseki [9:28 AM] 
+Scratch that, it was a miscommunication!
+
+cameronwilby [4:04 PM] 
+https://github.com/gajus/swing
+ 
+GitHub
+gajus/swing
+swing - A swipeable cards interface. The swipe-left/swipe-right for yes/no input. As seen in apps like Jelly and Tinder.
+
+
+----- March 16th -----
+astrakiseki [8:54 AM] 
+Now I get why you were nudging for an angular version.  I'm not sure how to approach putting the controller in.
+
+astrakiseki [9:00 AM] 
+also, uh, wouldn't ng-click be the function we need for the swipe thing?
+
+astrakiseki [9:32 AM] 
+(Also can I have the code you wrote up for the swiping to see if I can get it to work?)
+
+astrakiseki [10:40 AM] 
+Pinging for the inquiry.
+
+cameronwilby [11:22 AM] 
+sorry was with a student
+
+astrakiseki [11:22 AM] 
+Ah!
+
+cameronwilby [11:22 AM] 
+so I didn't actually accomplish much with the code we wrote yesterday - i would say take a look at this library and see if you can get it to work
+
+[11:22] 
+(incoming)
+
+astrakiseki [11:22 AM] 
+Alright.
+
+cameronwilby [11:23 AM] 
+https://www.npmjs.com/package/angular-swing
+ 
+npm
+angular-swing
+AngularJS directive for Swing: A swipeable cards interface. The swipe-left/swipe-right for yes/no input. As seen in apps like Jelly and Tinder.
+
+[11:23] 
+http://angularscript.com/tinder-like-card-directive-for-angular-ng-swippy/
+Angular Script
+Tinder-like Card Directive For Angular - ng-swippy - Angular Script
+ng-swippy is an Angular directive for tinder-like card view. (292KB)
+Oct 18th, 2015 at 12:22 AM
+
+
+astrakiseki [11:24 AM] 
+Alright, thank you.
+
+
+----- March 17th -----
+astrakiseki [9:40 AM] 
+My brain is hitting a blank, so I'm asking to see if I know how to approach this stuff mentally.
+To get a new page working on the web, the order is
+the ctrl.js page, then the html, then add to the app.js?
+
+cameronwilby [9:41 AM] 
+yep -
+
+`Write the Angular Controller`
+`Create the html file in the Templates folder`
+`Add a state to the app.js file - give the state a name and point to the Controller + Template`
+
